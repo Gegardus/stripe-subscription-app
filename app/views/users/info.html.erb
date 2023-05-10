@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Account for <%= current_user.email %></h3>
+  <h5>UserID <%= current_user.id %></h5>
+  <% if @subscription.active %>
+    <%= link_to "Cancel Subscription", users_cancel_subscription_path %>
+  <% else %>
+    <%= render 'form' %>
+  <% end %>
+</div>
+
